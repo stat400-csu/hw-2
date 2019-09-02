@@ -1,8 +1,17 @@
-# hw-2
+---
+title: "STAT400 - Homework 2"
+author: "Your Name"
+date: "Due 9/12/2019 by 4pm"
+output: pdf_document
+---
 
-Homework 2 in STAT400: Computational Statistics @ CSU
-
-## Assignment
+```{r, message=FALSE, warning=FALSE}
+## Some useful packages
+library(readr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+```
 
 The City of Fort Collins maintains a web portal to host data sets that are available to the public in a format that citizens can easily search, filter, and utilize (https://www.fcgov.com/opendata/). In particular, they have released the earnings of city employees from 2010-2018.
 
@@ -14,7 +23,25 @@ Each of these data sets are included in this repo under the `data/` folder.
     - Change the column names to `job_title`, `department`, and `earnings`.
     - Make `job_title` and `department` values lower case (see `tolower()` and `mutate_at()`).
     - Add a column called `year` with the appropriate year.
+    
+    ```{r}
+    ## Write your function here
+    load_and_format <- function(year) {
+      
+    }
+    ```
+   
 2. Apply your function to all years available of the city employees data (2010-2018) and store your results in a single data frame (see `rbind` for binding rows of data frames together).
+
+    ```{r}
+    ## Apply your function to the years available
+    years <- 2010:2018
+    
+    ```
+
 3. For those departments that have over 25 unique job titles, make a plot that depicts earnings over time by department in the city of Fort Collins.
 
-Turn in in a pdf of your homework to canvas. Your .Rmd file on rstudio.cloud will also be used in grading, so be sure they are identical and reproducible.
+    ```{r}
+    ## Visualize your data
+    
+    ```
